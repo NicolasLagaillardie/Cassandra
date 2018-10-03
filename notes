@@ -9,3 +9,5 @@ CREATE TABLE users (
   email text,
   city text,
 PRIMARY KEY (lastname));
+
+ALTER TABLE users ADD notes list<int>;

@@ -1,11 +1,11 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.9.29)  1 OCT 2018 23:22
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.10.3)  3 OCT 2018 12:09
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
 **lab_report_1.tex
 (./lab_report_1.tex
 LaTeX2e <2017-04-15>
-Babel <3.18> and hyphenation patterns for 9 language(s) loaded.
+Babel <3.18> and hyphenation patterns for 11 language(s) loaded.
 (/usr/share/texlive/texmf-dist/tex/latex/base/article.cls
 Document Class: article 2014/09/29 v1.4h Standard LaTeX document class
 (/usr/share/texlive/texmf-dist/tex/latex/base/size10.clo
@@ -779,40 +779,90 @@ Package: tabto 2013/03/25  v 1.3  Another tabbing mechanism
 \ULC@box=\box68
 Package: ulem 2012/05/18
 \ULdepth=\dimen258
+)
+(/usr/share/texlive/texmf-dist/tex/generic/e-french/french.sty
+(/usr/share/texlive/texmf-dist/tex/latex/msg/msg.sty
+(/usr/share/texlive/texmf-dist/tex/latex/base/inputenc.sty
+Package: inputenc 2015/03/17 v1.2c Input encoding file
+\inpenc@prehook=\toks31
+\inpenc@posthook=\toks32
+)
+\@inputmsg=\read4
+Package: msg 2006/11/09 chargement de l'extension de localisation (V0.50).
+)
+Package: french 2017/08/10 The e-french package /V6,01/
+
+
+-29- ***Attention*** : le moteur TeX en utilisation avec des fontes CM 
+    (comme dans ce format TeX) est insuffisant pour la cÈsure 
+    des mots accentuÈs (comme en franÁais).
+\@FrDimen=\dimen259
+
+-23- Extension : e-french V6,01 -- 10 ao\unhbox \voidb@x \bgroup \let \unhbox \
+voidb@x \setbox \@tempboxa \hbox {u\global \mathchardef \accent@spacefactor \sp
+acefactor }\accent 94 u\egroup \spacefactor \accent@spacefactor t 2017 -- (B.Ga
+ulle)
+-24- french.sty utilise dans ce document le codage de fonte OT1.
+-25- french.sty affiche ici ses messages en 7-bits << ‡ la TeX >>.
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/latexsym.sty
+Package: latexsym 1998/08/17 v2.2e Standard LaTeX package (lasy symbols)
+\symlasy=\mathgroup4
+LaTeX Font Info:    Overwriting symbol font `lasy' in version `bold'
+(Font)                  U/lasy/m/n --> U/lasy/b/n (voir le source, ligne 52).
+)
+LaTeX Font Info:    Redeclaring font encoding T1 (voir le source, ligne 608).
+
+(/usr/share/texlive/texmf-dist/tex/generic/e-french/fenglish.sty
+File: fenglish.sty 2004/06/23 english interface for the french(le/pro) package
+)
+
+-18- french.sty force l'option \nofrenchguillemets en maths avec AmSLaTeX.
 ) (./lab_report_1.aux)
 \openout1 = `lab_report_1.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 49.
-LaTeX Font Info:    ... okay on input line 49.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 49.
-LaTeX Font Info:    ... okay on input line 49.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 49.
-LaTeX Font Info:    ... okay on input line 49.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 49.
-LaTeX Font Info:    ... okay on input line 49.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 49.
-LaTeX Font Info:    ... okay on input line 49.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 49.
-LaTeX Font Info:    ... okay on input line 49.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it (voir le source, ligne 5
+1).
+LaTeX Font Info:    ... okay (voir le source, ligne 51).
+LaTeX Font Info:    Checking defaults for T1/lmr/m/n (voir le source, ligne 51)
+.
+LaTeX Font Info:    Try loading font information for T1+lmr (voir le source, li
+gne 51).
+ (/usr/share/texmf/tex/latex/lm/t1lmr.fd
+File: t1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+LaTeX Font Info:    ... okay (voir le source, ligne 51).
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n (voir le source, ligne 51
+).
+LaTeX Font Info:    ... okay (voir le source, ligne 51).
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n (voir le source, ligne 5
+1).
+LaTeX Font Info:    ... okay (voir le source, ligne 51).
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n (voir le source, ligne 5
+1).
+LaTeX Font Info:    ... okay (voir le source, ligne 51).
+LaTeX Font Info:    Checking defaults for U/cmr/m/n (voir le source, ligne 51).
+
+LaTeX Font Info:    ... okay (voir le source, ligne 51).
 .................................................
 . chemgreek info: "mapping-activated"
 . 
-. Activating mapping `default' on line 49.
+. Activating mapping `default' on line 51.
 .................................................
 
 (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count294
-\scratchdimen=\dimen259
+\scratchdimen=\dimen260
 \scratchbox=\box69
 \nofMPsegments=\count295
 \nofMParguments=\count296
-\everyMPshowfont=\toks31
+\everyMPshowfont=\toks33
 \MPscratchCnt=\count297
-\MPscratchDim=\dimen260
+\MPscratchDim=\dimen261
 \MPnumerator=\count298
 \makeMPintoPDFobject=\count299
-\everyMPtoPDFconversion=\toks32
+\everyMPtoPDFconversion=\toks34
 ) (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
 
@@ -858,12 +908,12 @@ Package pdftexcmds Info: \pdf@primitive is available.
 Package pdftexcmds Info: \pdf@ifprimitive is available.
 Package pdftexcmds Info: \pdfdraftmode found.
 )
-Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
-38.
+Package epstopdf-base Info: Redefining graphics rule for `.eps' (voir le source
+, ligne 438).
 Package grfext Info: Graphics extension search list:
 (grfext)             [.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPE
 G,.JBIG2,.JB2,.eps]
-(grfext)             \AppendGraphicsExtensions on input line 456.
+(grfext)             \AppendGraphicsExtensions (voir le source, ligne 456).
 
 (/usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
@@ -878,7 +928,20 @@ File: siunitx-abbreviations.cfg 2017/11/26 v2.7k siunitx: Abbreviated units
 )
 ABD: EveryShipout initializing macros
 \c__siunitx_mathsf_int=\count300
+LaTeX Font Info:    Try loading font information for U+lasy (voir le source, li
+gne 51).
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/ulasy.fd
+File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
+)
 \c__siunitx_mathtt_int=\count301
+\c@chapter=\count302
+\@FrCount=\count303
+
+
+ french.sty : -48- Lecture du fichier de configuration de e-french (\`a la lign
+e 51).
+(/usr/share/texlive/texmf-dist/tex/generic/e-french/french.cfg)
 Missing character: There is no ‚ in font cmr10!
 Missing character: There is no Ä in font cmr10!
 Missing character: There is no ô in font cmr10!
@@ -888,54 +951,54 @@ Missing character: There is no ô in font cmr10!
  [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
-LaTeX Font Info:    Try loading font information for OML+cmr on input line 125.
+LaTeX Font Info:    Try loading font information for OML+cmr (voir le source, l
+igne 127).
 
- (/usr/share/texlive/texmf-dist/tex/latex/base/omlcmr.fd
+(/usr/share/texlive/texmf-dist/tex/latex/base/omlcmr.fd
 File: omlcmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OML/cmr/m/n' in size <10> not available
-(Font)              Font shape `OML/cmm/m/it' tried instead on input line 125.
+(Font)              Font shape `OML/cmm/m/it' tried instead (voir le source, li
+gne 127).
  [2]
 <insideDatanode.png, id=21, 1232.605pt x 678.535pt>
 File: insideDatanode.png Graphic file (type png)
 <use insideDatanode.png>
-Package pdftex.def Info: insideDatanode.png  used on input line 193.
+Package pdftex.def Info: insideDatanode.png  used (voir le source, ligne 195).
 (pdftex.def)             Requested size: 293.2521pt x 161.42293pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 203--206
-\OT1/cmr/m/n/10 $ bin/hadoop jar WC.jar Word-Count /user/Lag/ABU
+Underfull \hbox (badness 10000) in paragraph at lines 205--208
+\OT1/cmr/m/n/10 $ bin/hadoop jar WC.jar WordCount /user/Lag/ABU
  []
 
 [3 <./insideDatanode.png>]
 <console_resultat_2.png, id=27, 935.495pt x 417.56pt>
 File: console_resultat_2.png Graphic file (type png)
 <use console_resultat_2.png>
-Package pdftex.def Info: console_resultat_2.png  used on input line 227.
+Package pdftex.def Info: console_resultat_2.png  used (voir le source, ligne 22
+9).
 (pdftex.def)             Requested size: 293.2521pt x 130.89494pt.
 <console_resultat_erreur.png, id=28, 930.47626pt x 411.5375pt>
 File: console_resultat_erreur.png Graphic file (type png)
 <use console_resultat_erreur.png>
-Package pdftex.def Info: console_resultat_erreur.png  used on input line 235.
+Package pdftex.def Info: console_resultat_erreur.png  used (voir le source, lig
+ne 237).
 (pdftex.def)             Requested size: 293.2521pt x 129.69778pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 241--242
+Underfull \hbox (badness 10000) in paragraph at lines 243--244
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 249--251
+Underfull \hbox (badness 10000) in paragraph at lines 251--253
 
  []
 
 [4 <./console_resultat_2.png> <./console_resultat_erreur.png>]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 255.
 
-
-(/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
-File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
-)
-LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 255.
+ french.sty : -22- abrÈviation de "{\}t{\}n{\}r{\}f.,\relax\unskip \penalty \@M
+ \kern+.1667em\relax ;\relax\unskip \penalty \@M \kern+.1667em\relax :\@beginpa
+rpenalty =\@M \relax -'{\}" non trouvÈe (\`a la ligne 257).
 Missing character: There is no ¬ in font cmr10!
 Missing character: There is no ´ in font cmr10!
 Missing character: There is no ¬ in font cmr10!
@@ -943,33 +1006,36 @@ Missing character: There is no ª in font cmr10!
 Missing character: There is no ‚ in font cmr10!
 Missing character: There is no Ä in font cmr10!
 Missing character: There is no ù in font cmr10!
+LaTeX Font Info:    Try loading font information for OMS+cmr (voir le source, l
+igne 259).
+(/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
+File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead (voir le source, li
+gne 259).
 
-Underfull \hbox (badness 10000) in paragraph at lines 259--261
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 266--270
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 271--272
+Underfull \hbox (badness 10000) in paragraph at lines 261--263
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 277--278
+Underfull \hbox (badness 10000) in paragraph at lines 268--272
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 281--282
+Underfull \hbox (badness 10000) in paragraph at lines 273--274
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 284--285
+Underfull \hbox (badness 10000) in paragraph at lines 279--280
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 283--284
 
  []
 
@@ -979,47 +1045,52 @@ Underfull \hbox (badness 10000) in paragraph at lines 286--287
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 289--291
+Underfull \hbox (badness 10000) in paragraph at lines 288--289
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 291--293
 
  []
 
 [5]
-Underfull \hbox (badness 10000) in paragraph at lines 299--300
+Underfull \hbox (badness 10000) in paragraph at lines 301--302
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 302--304
+Underfull \hbox (badness 10000) in paragraph at lines 304--306
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 305--306
+Underfull \hbox (badness 10000) in paragraph at lines 307--308
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 309--310
+Underfull \hbox (badness 10000) in paragraph at lines 311--312
 
  []
 
 <GoodResults.png, id=38, 1860.9525pt x 985.6825pt>
 File: GoodResults.png Graphic file (type png)
 <use GoodResults.png>
-Package pdftex.def Info: GoodResults.png  used on input line 315.
+Package pdftex.def Info: GoodResults.png  used (voir le source, ligne 317).
 (pdftex.def)             Requested size: 345.0pt x 182.72441pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [6] [7 <./GoodResults.png>] (./lab_report_1.aux) ) 
 Here is how much of TeX's memory you used:
- 22062 strings out of 494805
- 449442 string characters out of 6178000
- 473428 words of memory out of 5000000
- 25115 multiletter control sequences out of 15000+600000
- 539588 words of font info for 57 fonts, out of 8000000 for 9000
+ 23246 strings out of 494780
+ 461851 string characters out of 6176876
+ 493662 words of memory out of 5000000
+ 26268 multiletter control sequences out of 15000+600000
+ 540419 words of font info for 63 fonts, out of 8000000 for 9000
  81 hyphenation exceptions out of 8191
- 55i,6n,73p,10440b,611s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 55i,6n,73p,10440b,668s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dis
 t/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/font
 s/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type
@@ -1028,12 +1099,13 @@ blic/amsfonts/cm/cmcsc10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/
 amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfon
 ts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/c
 mr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pf
-b></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></us
-r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb>
-Output written on lab_report_1.pdf (7 pages, 475684 bytes).
+b></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/
+share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/
+texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb>
+Output written on lab_report_1.pdf (7 pages, 485518 bytes).
 PDF statistics:
- 80 PDF objects out of 1000 (max. 8388607)
- 52 compressed objects within 1 object stream
+ 84 PDF objects out of 1000 (max. 8388607)
+ 55 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  33 words of extra memory for PDF output out of 10000 (max. 10000000)
 
