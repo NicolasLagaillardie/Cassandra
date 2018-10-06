@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.10.3)  3 OCT 2018 12:09
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.10.3)  7 OCT 2018 00:20
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -942,170 +942,53 @@ File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
  french.sty : -48- Lecture du fichier de configuration de e-french (\`a la lign
 e 51).
 (/usr/share/texlive/texmf-dist/tex/generic/e-french/french.cfg)
-Missing character: There is no ‚ in font cmr10!
-Missing character: There is no Ä in font cmr10!
-Missing character: There is no ô in font cmr10!
-Missing character: There is no ‚ in font cmr10!
-Missing character: There is no Ä in font cmr10!
-Missing character: There is no ô in font cmr10!
+Underfull \hbox (badness 10000) in paragraph at lines 100--101
+
+ []
+
+LaTeX Font Info:    Try loading font information for OMS+cmr (voir le source, l
+igne 124).
+(/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
+File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead (voir le source, li
+gne 124).
  [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
 LaTeX Font Info:    Try loading font information for OML+cmr (voir le source, l
-igne 127).
+igne 143).
 
 (/usr/share/texlive/texmf-dist/tex/latex/base/omlcmr.fd
 File: omlcmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OML/cmr/m/n' in size <10> not available
 (Font)              Font shape `OML/cmm/m/it' tried instead (voir le source, li
-gne 127).
+gne 143).
  [2]
-<insideDatanode.png, id=21, 1232.605pt x 678.535pt>
-File: insideDatanode.png Graphic file (type png)
-<use insideDatanode.png>
-Package pdftex.def Info: insideDatanode.png  used (voir le source, ligne 195).
-(pdftex.def)             Requested size: 293.2521pt x 161.42293pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 205--208
-\OT1/cmr/m/n/10 $ bin/hadoop jar WC.jar WordCount /user/Lag/ABU
- []
-
-[3 <./insideDatanode.png>]
-<console_resultat_2.png, id=27, 935.495pt x 417.56pt>
-File: console_resultat_2.png Graphic file (type png)
-<use console_resultat_2.png>
-Package pdftex.def Info: console_resultat_2.png  used (voir le source, ligne 22
-9).
-(pdftex.def)             Requested size: 293.2521pt x 130.89494pt.
-<console_resultat_erreur.png, id=28, 930.47626pt x 411.5375pt>
-File: console_resultat_erreur.png Graphic file (type png)
-<use console_resultat_erreur.png>
-Package pdftex.def Info: console_resultat_erreur.png  used (voir le source, lig
-ne 237).
-(pdftex.def)             Requested size: 293.2521pt x 129.69778pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 243--244
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 251--253
-
- []
-
-[4 <./console_resultat_2.png> <./console_resultat_erreur.png>]
-
- french.sty : -22- abrÈviation de "{\}t{\}n{\}r{\}f.,\relax\unskip \penalty \@M
- \kern+.1667em\relax ;\relax\unskip \penalty \@M \kern+.1667em\relax :\@beginpa
-rpenalty =\@M \relax -'{\}" non trouvÈe (\`a la ligne 257).
-Missing character: There is no ¬ in font cmr10!
-Missing character: There is no ´ in font cmr10!
-Missing character: There is no ¬ in font cmr10!
-Missing character: There is no ª in font cmr10!
-Missing character: There is no ‚ in font cmr10!
-Missing character: There is no Ä in font cmr10!
-Missing character: There is no ù in font cmr10!
-LaTeX Font Info:    Try loading font information for OMS+cmr (voir le source, l
-igne 259).
-(/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
-File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
-)
-LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead (voir le source, li
-gne 259).
-
-Underfull \hbox (badness 10000) in paragraph at lines 261--263
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 268--272
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 273--274
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 279--280
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 283--284
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 286--287
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 288--289
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 291--293
-
- []
-
-[5]
-Underfull \hbox (badness 10000) in paragraph at lines 301--302
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 304--306
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 307--308
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 311--312
-
- []
-
-<GoodResults.png, id=38, 1860.9525pt x 985.6825pt>
-File: GoodResults.png Graphic file (type png)
-<use GoodResults.png>
-Package pdftex.def Info: GoodResults.png  used (voir le source, ligne 317).
-(pdftex.def)             Requested size: 345.0pt x 182.72441pt.
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[6] [7 <./GoodResults.png>] (./lab_report_1.aux) ) 
+(./lab_report_1.aux) ) 
 Here is how much of TeX's memory you used:
- 23246 strings out of 494780
- 461851 string characters out of 6176876
- 493662 words of memory out of 5000000
- 26268 multiletter control sequences out of 15000+600000
- 540419 words of font info for 63 fonts, out of 8000000 for 9000
+ 23205 strings out of 494780
+ 461036 string characters out of 6176876
+ 492628 words of memory out of 5000000
+ 26234 multiletter control sequences out of 15000+600000
+ 539759 words of font info for 61 fonts, out of 8000000 for 9000
  81 hyphenation exceptions out of 8191
- 55i,6n,73p,10440b,668s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share/texlive/texmf-dis
-t/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/font
-s/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type
-1/public/amsfonts/cm/cmbxti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/pu
-blic/amsfonts/cm/cmcsc10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/
-amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfon
-ts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/c
-mr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pf
-b></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/
-share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/
-texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb>
-Output written on lab_report_1.pdf (7 pages, 485518 bytes).
+ 55i,6n,73p,10440b,527s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfont
+s/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/c
+mbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10
+.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><
+/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/sh
+are/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/tex
+live/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/te
+xmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-di
+st/fonts/type1/public/amsfonts/cm/cmti10.pfb>
+Output written on lab_report_1.pdf (2 pages, 103138 bytes).
 PDF statistics:
- 84 PDF objects out of 1000 (max. 8388607)
- 55 compressed objects within 1 object stream
+ 50 PDF objects out of 1000 (max. 8388607)
+ 36 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 33 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 13 words of extra memory for PDF output out of 10000 (max. 10000000)
 
