@@ -1,36 +1,36 @@
-CREATE KEYSPACE emse WITH replication = {'class': 'SimpleStrategy', 'replication_factor': '1'}
+CREATE KEYSPACE emse WITH replication = {'class': 'SimpleStrategy', 'replication_factor': '1'}  AND durable_writes = true;
 
-CREATE TYPE emse.schedule_item (
-    room text,
-    course_duration duration
-);
-
-CREATE TABLE emse.course (
-    id_course uuid PRIMARY KEY,
-    allocated_hours int,
+CREATE TYPE emse.course (
+    id_course uuid,
     name text,
+    allocated_hours int,
     referent_teacher text
 );
 
-CREATE TABLE emse.result (
-    id_result uuid PRIMARY KEY,
-    id_course uuid,
-    id_student uuid,
-    results list<decimal>
+CREATE TYPE emse.schedule_entry (
+    date timestamp,
+    duration duration,
+    room text
 );
 
-CREATE TABLE emse.student (
-    id_student uuid PRIMARY KEY,
+CREATE TYPE emse.student (
+    id_student uuid,
     first_name text,
     last_name text,
     mail text,
-    promotion text,
-    results set<uuid>,
-    taken_courses set<uuid>
+    promotion text
 );
 
-CREATE TABLE emse.schedule (
-    id_schedule uuid PRIMARY KEY,
-    hours map<timestamp, frozen<schedule_item>>,
-    id_course uuid
+CREATE TABLE emse.courses_by_student (
+    student frozen<student> PRIMARY KEY,
+    results map<frozen<course>, frozen<list<decimal>>>,
+    schedule map<frozen<course>, frozen<set<frozen<schedule_entry>>>>,
+    taken_courses set<frozen<course>>
 );
+
+CREATE TABLE emse.students_by_course (
+    course frozen<course> PRIMARY KEY,
+    schedule set<frozen<schedule_entry>>,
+    students set<frozen<student>>
+);
+
