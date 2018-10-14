@@ -1,0 +1,67 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k}{class} \PYG{n+nc}{Student}\PYG{p}{:}
+
+    \PYG{k}{def} \PYG{n+nf+fm}{\PYGZus{}\PYGZus{}init\PYGZus{}\PYGZus{}}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{p}{,} \PYG{n}{id\PYGZus{}student}\PYG{p}{,} \PYG{n}{first\PYGZus{}name}\PYG{p}{,} \PYG{n}{last\PYGZus{}name}\PYG{p}{,} \PYG{n}{mail}\PYG{p}{,} \PYG{n}{promotion}\PYG{p}{):}
+        \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{id\PYGZus{}student} \PYG{o}{=} \PYG{n}{id\PYGZus{}student}
+        \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{first\PYGZus{}name} \PYG{o}{=} \PYG{n}{first\PYGZus{}name}
+        \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{last\PYGZus{}name} \PYG{o}{=} \PYG{n}{last\PYGZus{}name}
+        \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{mail} \PYG{o}{=} \PYG{n}{mail}
+        \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{promotion} \PYG{o}{=} \PYG{n}{promotion}
+
+    \PYG{k}{def} \PYG{n+nf+fm}{\PYGZus{}\PYGZus{}str\PYGZus{}\PYGZus{}}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{p}{):}
+        \PYG{c+c1}{\PYGZsh{} Automatically used when \PYGZsq{}execute\PYGZsq{} is called to generate the CQL query.}
+        \PYG{k}{return} \PYG{l+s+s2}{\PYGZdq{}\PYGZob{}id\PYGZus{}student : \PYGZdq{}} \PYG{o}{+} \PYG{n+nb}{str}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{id\PYGZus{}student}\PYG{p}{)} \PYG{o}{+}\PYGZbs{}
+               \PYG{l+s+s2}{\PYGZdq{}, first\PYGZus{}name : \PYGZsq{}\PYGZdq{}} \PYG{o}{+} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{first\PYGZus{}name} \PYG{o}{+}\PYGZbs{}
+               \PYG{l+s+s2}{\PYGZdq{}\PYGZsq{}, last\PYGZus{}name : \PYGZsq{}\PYGZdq{}} \PYG{o}{+} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{last\PYGZus{}name} \PYG{o}{+}\PYGZbs{}
+               \PYG{l+s+s2}{\PYGZdq{}\PYGZsq{}, mail : \PYGZsq{}\PYGZdq{}} \PYG{o}{+} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{mail} \PYG{o}{+}\PYGZbs{}
+               \PYG{l+s+s2}{\PYGZdq{}\PYGZsq{}, promotion : \PYGZsq{}\PYGZdq{}} \PYG{o}{+} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{promotion} \PYG{o}{+}\PYGZbs{}
+               \PYG{l+s+s2}{\PYGZdq{}\PYGZsq{}\PYGZcb{}\PYGZdq{}}
+
+    \PYG{n+nd}{@staticmethod}
+    \PYG{k}{def} \PYG{n+nf}{student\PYGZus{}from\PYGZus{}select}\PYG{p}{(}\PYG{n}{row\PYGZus{}student}\PYG{p}{):}
+        \PYG{k}{return} \PYG{n}{Student}\PYG{p}{(}
+            \PYG{n}{row\PYGZus{}student}\PYG{o}{.}\PYG{n}{id\PYGZus{}student}\PYG{p}{,}
+            \PYG{n}{row\PYGZus{}student}\PYG{o}{.}\PYG{n}{first\PYGZus{}name}\PYG{p}{,}
+            \PYG{n}{row\PYGZus{}student}\PYG{o}{.}\PYG{n}{last\PYGZus{}name}\PYG{p}{,}
+            \PYG{n}{row\PYGZus{}student}\PYG{o}{.}\PYG{n}{mail}\PYG{p}{,}
+            \PYG{n}{row\PYGZus{}student}\PYG{o}{.}\PYG{n}{promotion}\PYG{p}{)}
+
+
+\PYG{k}{class} \PYG{n+nc}{Course}\PYG{p}{:}
+    \PYG{k}{def} \PYG{n+nf+fm}{\PYGZus{}\PYGZus{}init\PYGZus{}\PYGZus{}}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{p}{,} \PYG{n}{id\PYGZus{}course}\PYG{p}{,} \PYG{n}{name}\PYG{p}{,} \PYG{n}{allocated\PYGZus{}hours}\PYG{p}{,} \PYG{n}{referent\PYGZus{}teacher}\PYG{p}{):}
+        \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{id\PYGZus{}course} \PYG{o}{=} \PYG{n}{id\PYGZus{}course}
+        \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{name} \PYG{o}{=} \PYG{n}{name}
+        \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{allocated\PYGZus{}hours} \PYG{o}{=} \PYG{n}{allocated\PYGZus{}hours}
+        \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{referent\PYGZus{}teacher} \PYG{o}{=} \PYG{n}{referent\PYGZus{}teacher}
+
+    \PYG{k}{def} \PYG{n+nf+fm}{\PYGZus{}\PYGZus{}str\PYGZus{}\PYGZus{}}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{p}{):}
+        \PYG{c+c1}{\PYGZsh{} Automatically used when \PYGZsq{}execute\PYGZsq{} is called to generate the CQL query.}
+        \PYG{k}{return} \PYG{l+s+s2}{\PYGZdq{}\PYGZob{}id\PYGZus{}course : \PYGZdq{}} \PYG{o}{+} \PYG{n+nb}{str}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{id\PYGZus{}course}\PYG{p}{)} \PYG{o}{+}\PYGZbs{}
+               \PYG{l+s+s2}{\PYGZdq{}, name : \PYGZsq{}\PYGZdq{}} \PYG{o}{+} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{name} \PYG{o}{+}\PYGZbs{}
+               \PYG{l+s+s2}{\PYGZdq{}\PYGZsq{}, allocated\PYGZus{}hours : \PYGZdq{}} \PYG{o}{+} \PYG{n+nb}{str}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{allocated\PYGZus{}hours}\PYG{p}{)} \PYG{o}{+}\PYGZbs{}
+               \PYG{l+s+s2}{\PYGZdq{}, referent\PYGZus{}teacher : \PYGZsq{}\PYGZdq{}} \PYG{o}{+} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{referent\PYGZus{}teacher} \PYG{o}{+}\PYGZbs{}
+               \PYG{l+s+s2}{\PYGZdq{}\PYGZsq{}\PYGZcb{}\PYGZdq{}}
+
+    \PYG{n+nd}{@staticmethod}
+    \PYG{k}{def} \PYG{n+nf}{course\PYGZus{}from\PYGZus{}select}\PYG{p}{(}\PYG{n}{row\PYGZus{}course}\PYG{p}{):}
+        \PYG{k}{return} \PYG{n}{Course}\PYG{p}{(}
+            \PYG{n}{row\PYGZus{}course}\PYG{o}{.}\PYG{n}{id\PYGZus{}course}\PYG{p}{,}
+            \PYG{n}{row\PYGZus{}course}\PYG{o}{.}\PYG{n}{name}\PYG{p}{,}
+            \PYG{n}{row\PYGZus{}course}\PYG{o}{.}\PYG{n}{allocated\PYGZus{}hours}\PYG{p}{,}
+            \PYG{n}{row\PYGZus{}course}\PYG{o}{.}\PYG{n}{referent\PYGZus{}teacher}
+        \PYG{p}{)}
+
+
+\PYG{k}{class} \PYG{n+nc}{Schedule\PYGZus{}Entry}\PYG{p}{:}
+    \PYG{k}{def} \PYG{n+nf+fm}{\PYGZus{}\PYGZus{}init\PYGZus{}\PYGZus{}}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{p}{,} \PYG{n}{date}\PYG{p}{,} \PYG{n}{duration}\PYG{p}{,} \PYG{n}{room}\PYG{p}{):}
+        \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{date} \PYG{o}{=} \PYG{n}{date}
+        \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{duration} \PYG{o}{=} \PYG{n}{duration}
+        \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{room} \PYG{o}{=} \PYG{n}{room}
+
+    \PYG{k}{def} \PYG{n+nf+fm}{\PYGZus{}\PYGZus{}str\PYGZus{}\PYGZus{}}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{p}{):}
+        \PYG{c+c1}{\PYGZsh{} Automatically used when \PYGZsq{}execute\PYGZsq{} is called to generate the CQL query.}
+        \PYG{k}{return} \PYG{l+s+s2}{\PYGZdq{}\PYGZob{}date : \PYGZsq{}\PYGZdq{}} \PYG{o}{+} \PYG{n+nb}{str}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{date}\PYG{p}{)} \PYG{o}{+} \PYGZbs{}
+               \PYG{l+s+s2}{\PYGZdq{}\PYGZsq{}, duration : \PYGZdq{}} \PYG{o}{+} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{duration} \PYG{o}{+} \PYGZbs{}
+               \PYG{l+s+s2}{\PYGZdq{}, room : \PYGZsq{}\PYGZdq{}} \PYG{o}{+} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{room} \PYG{o}{+} \PYGZbs{}
+               \PYG{l+s+s2}{\PYGZdq{}\PYGZsq{}\PYGZcb{}\PYGZdq{}}
+\end{Verbatim}

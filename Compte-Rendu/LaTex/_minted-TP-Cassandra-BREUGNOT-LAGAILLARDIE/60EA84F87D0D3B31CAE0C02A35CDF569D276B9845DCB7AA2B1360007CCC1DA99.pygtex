@@ -1,0 +1,13 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{c+c1}{\PYGZsh{} Cassandra driver}
+\PYG{k+kn}{from} \PYG{n+nn}{cassandra.cluster} \PYG{k+kn}{import} \PYG{n}{Cluster}
+
+\PYG{k}{def} \PYG{n+nf}{init\PYGZus{}cassandra}\PYG{p}{():}
+    \PYG{n}{cluster} \PYG{o}{=} \PYG{n}{Cluster}\PYG{p}{()}
+    \PYG{n}{session} \PYG{o}{=} \PYG{n}{cluster}\PYG{o}{.}\PYG{n}{connect}\PYG{p}{()}
+
+    \PYG{c+c1}{\PYGZsh{} Select emse keyspace}
+    \PYG{n}{session}\PYG{o}{.}\PYG{n}{set\PYGZus{}keyspace}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}emse\PYGZsq{}}\PYG{p}{)}
+
+    \PYG{k}{return} \PYG{n}{session}
+\end{Verbatim}

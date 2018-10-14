@@ -1,0 +1,37 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k}{def} \PYG{n+nf}{add\PYGZus{}results}\PYG{p}{(}\PYG{n}{session}\PYG{p}{,} \PYG{n}{results\PYGZus{}number\PYGZus{}by\PYGZus{}course}\PYG{o}{=}\PYG{l+m+mi}{10}\PYG{p}{):}
+    \PYG{n}{students} \PYG{o}{=} \PYG{n}{session}\PYG{o}{.}\PYG{n}{execute}\PYG{p}{(}
+        \PYG{l+s+sd}{\PYGZdq{}\PYGZdq{}\PYGZdq{}}
+\PYG{l+s+sd}{        SELECT student, taken\PYGZus{}courses FROM courses\PYGZus{}by\PYGZus{}student}
+\PYG{l+s+sd}{        \PYGZdq{}\PYGZdq{}\PYGZdq{}}\PYG{p}{)}
+
+    \PYG{n}{results} \PYG{o}{=} \PYG{p}{\PYGZob{}\PYGZcb{}}
+    \PYG{k}{for} \PYG{n}{row} \PYG{o+ow}{in} \PYG{n}{students}\PYG{p}{:}
+        \PYG{n}{student} \PYG{o}{=} \PYG{n}{Student}\PYG{o}{.}\PYG{n}{student\PYGZus{}from\PYGZus{}select}\PYG{p}{(}\PYG{n}{row}\PYG{o}{.}\PYG{n}{student}\PYG{p}{)}
+        \PYG{n}{results}\PYG{p}{[}\PYG{n}{student}\PYG{p}{]} \PYG{o}{=} \PYG{p}{\PYGZob{}\PYGZcb{}}
+        \PYG{k}{if} \PYG{n}{row}\PYG{o}{.}\PYG{n}{taken\PYGZus{}courses} \PYG{o+ow}{is} \PYG{o+ow}{not} \PYG{n+nb+bp}{None}\PYG{p}{:}
+            \PYG{k}{for} \PYG{n}{row\PYGZus{}course} \PYG{o+ow}{in} \PYG{n}{row}\PYG{o}{.}\PYG{n}{taken\PYGZus{}courses}\PYG{p}{:}
+                \PYG{n}{course} \PYG{o}{=} \PYG{n}{Course}\PYG{p}{(}
+                    \PYG{n}{row\PYGZus{}course}\PYG{o}{.}\PYG{n}{id\PYGZus{}course}\PYG{p}{,}
+                    \PYG{n}{row\PYGZus{}course}\PYG{o}{.}\PYG{n}{name}\PYG{p}{,}
+                    \PYG{n}{row\PYGZus{}course}\PYG{o}{.}\PYG{n}{allocated\PYGZus{}hours}\PYG{p}{,}
+                    \PYG{n}{row\PYGZus{}course}\PYG{o}{.}\PYG{n}{referent\PYGZus{}teacher}\PYG{p}{)}
+                \PYG{n}{marks} \PYG{o}{=} \PYG{p}{[}\PYG{n}{randint}\PYG{p}{(}\PYG{l+m+mi}{0}\PYG{p}{,} \PYG{l+m+mi}{20}\PYG{p}{)} \PYG{k}{for} \PYG{n}{i} \PYG{o+ow}{in} \PYG{n+nb}{range}\PYG{p}{(}\PYG{n}{results\PYGZus{}number\PYGZus{}by\PYGZus{}course}\PYG{p}{)]}
+                \PYG{n}{results}\PYG{p}{[}\PYG{n}{student}\PYG{p}{][}\PYG{n}{course}\PYG{p}{]} \PYG{o}{=} \PYG{n}{marks}
+
+    \PYG{n}{total\PYGZus{}results} \PYG{o}{=} \PYG{n+nb}{sum}\PYG{p}{([}\PYG{n+nb}{len}\PYG{p}{(}\PYG{n}{results}\PYG{p}{[}\PYG{n}{student}\PYG{p}{])} \PYG{k}{for} \PYG{n}{student} \PYG{o+ow}{in} \PYG{n}{results}\PYG{o}{.}\PYG{n}{keys}\PYG{p}{()])}
+    \PYG{k}{print}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}Adding \PYGZdq{}} \PYG{o}{+} \PYG{n+nb}{str}\PYG{p}{(}\PYG{n}{total\PYGZus{}results}\PYG{p}{)} \PYG{o}{+} \PYG{l+s+s2}{\PYGZdq{} random hours to Schedule...\PYGZdq{}}\PYG{p}{)}
+    \PYG{n}{begin} \PYG{o}{=} \PYG{n}{datetime}\PYG{o}{.}\PYG{n}{now}\PYG{p}{()}
+    \PYG{k}{for} \PYG{n}{student} \PYG{o+ow}{in} \PYG{n}{results}\PYG{o}{.}\PYG{n}{keys}\PYG{p}{():}
+        \PYG{k}{for} \PYG{n}{course} \PYG{o+ow}{in} \PYG{n}{results}\PYG{p}{[}\PYG{n}{student}\PYG{p}{]}\PYG{o}{.}\PYG{n}{keys}\PYG{p}{():}
+            \PYG{n}{session}\PYG{o}{.}\PYG{n}{execute}\PYG{p}{(}
+                \PYG{l+s+sd}{\PYGZdq{}\PYGZdq{}\PYGZdq{}}
+\PYG{l+s+sd}{                UPDATE courses\PYGZus{}by\PYGZus{}student SET results[\PYGZpc{}s] = \PYGZpc{}s WHERE student = \PYGZpc{}s}
+\PYG{l+s+sd}{                \PYGZdq{}\PYGZdq{}\PYGZdq{}}\PYG{p}{,}
+                \PYG{p}{(}\PYG{n}{course}\PYG{p}{,} \PYG{n}{results}\PYG{p}{[}\PYG{n}{student}\PYG{p}{][}\PYG{n}{course}\PYG{p}{],} \PYG{n}{student}\PYG{p}{)}
+            \PYG{p}{)}
+
+    \PYG{n}{end} \PYG{o}{=} \PYG{n}{datetime}\PYG{o}{.}\PYG{n}{now}\PYG{p}{()}
+    \PYG{k}{print}\PYG{p}{(}\PYG{n+nb}{str}\PYG{p}{(}\PYG{n}{total\PYGZus{}results}\PYG{p}{)} \PYG{o}{+} \PYG{l+s+s2}{\PYGZdq{} random results added in \PYGZdq{}}
+          \PYG{o}{+} \PYG{n+nb}{str}\PYG{p}{((}\PYG{n}{end} \PYG{o}{\PYGZhy{}} \PYG{n}{begin}\PYG{p}{)}\PYG{o}{.}\PYG{n}{total\PYGZus{}seconds}\PYG{p}{())} \PYG{o}{+} \PYG{l+s+s2}{\PYGZdq{} seconds.\PYGZdq{}}\PYG{p}{)}
+\end{Verbatim}

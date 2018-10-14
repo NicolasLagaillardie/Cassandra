@@ -1,0 +1,54 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k}{def} \PYG{n+nf}{add\PYGZus{}students}\PYG{p}{(}\PYG{n}{session}\PYG{p}{,} \PYG{n}{entries\PYGZus{}number}\PYG{o}{=}\PYG{l+m+mi}{500}\PYG{p}{):}
+    \PYG{n}{promotions} \PYG{o}{=} \PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}1A\PYGZdq{}}\PYG{p}{,} \PYG{l+s+s2}{\PYGZdq{}2A\PYGZdq{}}\PYG{p}{,} \PYG{l+s+s2}{\PYGZdq{}3A\PYGZdq{}}\PYG{p}{)}
+
+    \PYG{c+c1}{\PYGZsh{} Add entries to table Student}
+    \PYG{n}{students} \PYG{o}{=} \PYG{p}{[]}
+
+    \PYG{n}{courses} \PYG{o}{=} \PYG{p}{[}\PYG{n}{Course}\PYG{o}{.}\PYG{n}{course\PYGZus{}from\PYGZus{}select}\PYG{p}{(}\PYG{n}{row}\PYG{o}{.}\PYG{n}{course}\PYG{p}{)}
+               \PYG{k}{for} \PYG{n}{row} \PYG{o+ow}{in} \PYG{n}{session}\PYG{o}{.}\PYG{n}{execute}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}SELECT course FROM students\PYGZus{}by\PYGZus{}course\PYGZdq{}}\PYG{p}{)]}
+
+    \PYG{k}{for} \PYG{n}{i} \PYG{o+ow}{in} \PYG{n+nb}{range}\PYG{p}{(}\PYG{n}{entries\PYGZus{}number}\PYG{p}{):}
+
+        \PYG{n}{ID\PYGZus{}Student} \PYG{o}{=} \PYG{n}{uuid1}\PYG{p}{()}
+        \PYG{n}{First\PYGZus{}Name} \PYG{o}{=} \PYG{l+s+s2}{\PYGZdq{}\PYGZdq{}}\PYG{o}{.}\PYG{n}{join}\PYG{p}{(}\PYG{n}{choice}\PYG{p}{(}\PYG{n}{string}\PYG{o}{.}\PYG{n}{ascii\PYGZus{}letters}\PYG{p}{)} \PYG{k}{for} \PYG{n}{x} \PYG{o+ow}{in} \PYG{n+nb}{range}\PYG{p}{(}\PYG{n}{randint}\PYG{p}{(}\PYG{l+m+mi}{5}\PYG{p}{,} \PYG{l+m+mi}{12}\PYG{p}{)))}
+        \PYG{n}{Last\PYGZus{}Name} \PYG{o}{=} \PYG{l+s+s2}{\PYGZdq{}\PYGZdq{}}\PYG{o}{.}\PYG{n}{join}\PYG{p}{(}\PYG{n}{choice}\PYG{p}{(}\PYG{n}{string}\PYG{o}{.}\PYG{n}{ascii\PYGZus{}letters}\PYG{p}{)} \PYG{k}{for} \PYG{n}{x} \PYG{o+ow}{in} \PYG{n+nb}{range}\PYG{p}{(}\PYG{n}{randint}\PYG{p}{(}\PYG{l+m+mi}{5}\PYG{p}{,} \PYG{l+m+mi}{12}\PYG{p}{)))}
+        \PYG{n}{Last\PYGZus{}Name} \PYG{o}{=} \PYG{n}{Last\PYGZus{}Name}\PYG{o}{.}\PYG{n}{upper}\PYG{p}{()}
+        \PYG{n}{First\PYGZus{}Name} \PYG{o}{=} \PYG{n}{First\PYGZus{}Name}\PYG{o}{.}\PYG{n}{capitalize}\PYG{p}{()}
+        \PYG{n}{Mail} \PYG{o}{=} \PYG{n}{First\PYGZus{}Name}\PYG{o}{.}\PYG{n}{lower}\PYG{p}{()} \PYG{o}{+} \PYG{l+s+s2}{\PYGZdq{}.\PYGZdq{}} \PYG{o}{+} \PYG{n}{First\PYGZus{}Name}\PYG{o}{.}\PYG{n}{lower}\PYG{p}{()} \PYG{o}{+} \PYG{l+s+s2}{\PYGZdq{}@etu.emse.fr\PYGZdq{}}
+        \PYG{n}{Promotion} \PYG{o}{=} \PYG{n}{promotions}\PYG{p}{[}\PYG{n}{randint}\PYG{p}{(}\PYG{l+m+mi}{0}\PYG{p}{,} \PYG{l+m+mi}{2}\PYG{p}{)]}
+
+        \PYG{n}{Taken\PYGZus{}Courses} \PYG{o}{=} \PYG{p}{[]}
+        \PYG{k}{for} \PYG{n}{course} \PYG{o+ow}{in} \PYG{n}{courses}\PYG{p}{:}
+            \PYG{k}{if} \PYG{n}{randint}\PYG{p}{(}\PYG{l+m+mi}{0}\PYG{p}{,} \PYG{l+m+mi}{1}\PYG{p}{):}
+                \PYG{n}{Taken\PYGZus{}Courses}\PYG{o}{.}\PYG{n}{append}\PYG{p}{(}\PYG{n}{course}\PYG{p}{)}
+
+        \PYG{n}{students}\PYG{o}{.}\PYG{n}{append}\PYG{p}{((}\PYG{n}{Student}\PYG{p}{(}\PYG{n}{ID\PYGZus{}Student}\PYG{p}{,} \PYG{n}{First\PYGZus{}Name}\PYG{p}{,} \PYG{n}{Last\PYGZus{}Name}\PYG{p}{,} \PYG{n}{Mail}\PYG{p}{,} \PYG{n}{Promotion}\PYG{p}{),} \PYG{n+nb}{set}\PYG{p}{(}\PYG{n}{Taken\PYGZus{}Courses}\PYG{p}{)))}
+
+    \PYG{k}{print}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}Adding \PYGZdq{}} \PYG{o}{+} \PYG{n+nb}{str}\PYG{p}{(}\PYG{n}{entries\PYGZus{}number}\PYG{p}{)} \PYG{o}{+} \PYG{l+s+s2}{\PYGZdq{} random students to Student...\PYGZdq{}}\PYG{p}{)}
+    \PYG{n}{begin} \PYG{o}{=} \PYG{n}{datetime}\PYG{o}{.}\PYG{n}{now}\PYG{p}{()}
+
+    \PYG{k}{print}\PYG{p}{(}\PYG{n}{students}\PYG{p}{)}
+    \PYG{k}{for} \PYG{n}{student} \PYG{o+ow}{in} \PYG{n}{students}\PYG{p}{:}
+
+        \PYG{c+c1}{\PYGZsh{} Add entries to courses\PYGZus{}by\PYGZus{}student}
+        \PYG{n}{session}\PYG{o}{.}\PYG{n}{execute}\PYG{p}{(}
+            \PYG{l+s+sd}{\PYGZdq{}\PYGZdq{}\PYGZdq{}}
+\PYG{l+s+sd}{            INSERT INTO courses\PYGZus{}by\PYGZus{}student (student, taken\PYGZus{}courses)}
+\PYG{l+s+sd}{            VALUES (\PYGZpc{}s, \PYGZpc{}s)}
+\PYG{l+s+sd}{            \PYGZdq{}\PYGZdq{}\PYGZdq{}}\PYG{p}{,}
+            \PYG{n}{student}
+        \PYG{p}{)}
+
+        \PYG{c+c1}{\PYGZsh{} Update students\PYGZus{}by\PYGZus{}course}
+        \PYG{k}{for} \PYG{n}{course} \PYG{o+ow}{in} \PYG{n}{student}\PYG{p}{[}\PYG{l+m+mi}{1}\PYG{p}{]:}
+            \PYG{n}{session}\PYG{o}{.}\PYG{n}{execute}\PYG{p}{(}
+                \PYG{l+s+sd}{\PYGZdq{}\PYGZdq{}\PYGZdq{}}
+\PYG{l+s+sd}{                UPDATE students\PYGZus{}by\PYGZus{}course SET students = students + \PYGZob{}\PYGZpc{}s\PYGZcb{} WHERE course = \PYGZpc{}s}
+\PYG{l+s+sd}{                \PYGZdq{}\PYGZdq{}\PYGZdq{}}\PYG{p}{,}
+                \PYG{p}{(}\PYG{n}{student}\PYG{p}{[}\PYG{l+m+mi}{0}\PYG{p}{],} \PYG{n}{course}\PYG{p}{)}
+            \PYG{p}{)}
+
+    \PYG{n}{end} \PYG{o}{=} \PYG{n}{datetime}\PYG{o}{.}\PYG{n}{now}\PYG{p}{()}
+    \PYG{k}{print}\PYG{p}{(}\PYG{n+nb}{str}\PYG{p}{(}\PYG{n}{entries\PYGZus{}number}\PYG{p}{)} \PYG{o}{+} \PYG{l+s+s2}{\PYGZdq{} random students added in \PYGZdq{}} \PYG{o}{+} \PYG{n+nb}{str}\PYG{p}{((}\PYG{n}{end} \PYG{o}{\PYGZhy{}} \PYG{n}{begin}\PYG{p}{)}\PYG{o}{.}\PYG{n}{total\PYGZus{}seconds}\PYG{p}{())} \PYG{o}{+} \PYG{l+s+s2}{\PYGZdq{} seconds.\PYGZdq{}}\PYG{p}{)}
+\end{Verbatim}

@@ -1,0 +1,21 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k}{def} \PYG{n+nf}{add\PYGZus{}courses}\PYG{p}{(}\PYG{n}{session}\PYG{p}{):}
+
+    \PYG{n}{courses} \PYG{o}{=}\PYGZbs{}
+        \PYG{p}{[}\PYG{n}{Course}\PYG{p}{(}\PYG{n}{uuid1}\PYG{p}{(),} \PYG{l+s+s2}{\PYGZdq{}Majeure Info\PYGZdq{}}\PYG{p}{,} \PYG{l+m+mi}{159}\PYG{p}{,} \PYG{l+s+s2}{\PYGZdq{}Jean\PYGZdq{}}\PYG{p}{),}
+         \PYG{n}{Course}\PYG{p}{(}\PYG{n}{uuid1}\PYG{p}{(),} \PYG{l+s+s2}{\PYGZdq{}Défi Big Data\PYGZdq{}}\PYG{p}{,} \PYG{l+m+mi}{78}\PYG{p}{,} \PYG{l+s+s2}{\PYGZdq{}Robert\PYGZdq{}}\PYG{p}{),}
+         \PYG{n}{Course}\PYG{p}{(}\PYG{n}{uuid1}\PYG{p}{(),} \PYG{l+s+s2}{\PYGZdq{}TB3 IA\PYGZdq{}}\PYG{p}{,} \PYG{l+m+mi}{90}\PYG{p}{,} \PYG{l+s+s2}{\PYGZdq{}Martin\PYGZdq{}}\PYG{p}{),}
+         \PYG{n}{Course}\PYG{p}{(}\PYG{n}{uuid1}\PYG{p}{(),} \PYG{l+s+s2}{\PYGZdq{}TB1 Traitement d\PYGZus{}images\PYGZdq{}}\PYG{p}{,} \PYG{l+m+mi}{40}\PYG{p}{,} \PYG{l+s+s2}{\PYGZdq{}Paul\PYGZdq{}}\PYG{p}{)]}
+
+    \PYG{k}{print}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}Adding following entries to students\PYGZus{}by\PYGZus{}course : }\PYG{l+s+se}{\PYGZbs{}n}\PYG{l+s+s2}{\PYGZdq{}} \PYG{o}{+} \PYG{n+nb}{str}\PYG{p}{(}\PYG{n}{courses}\PYG{p}{))}
+
+    \PYG{c+c1}{\PYGZsh{} Add entries to table students\PYGZus{}by\PYGZus{}course}
+    \PYG{k}{for} \PYG{n}{course} \PYG{o+ow}{in} \PYG{n}{courses}\PYG{p}{:}
+        \PYG{n}{session}\PYG{o}{.}\PYG{n}{execute}\PYG{p}{(}
+            \PYG{l+s+sd}{\PYGZdq{}\PYGZdq{}\PYGZdq{}}
+\PYG{l+s+sd}{            INSERT INTO students\PYGZus{}by\PYGZus{}course (course)}
+\PYG{l+s+sd}{            VALUES (\PYGZpc{}s)}
+\PYG{l+s+sd}{            \PYGZdq{}\PYGZdq{}\PYGZdq{}}\PYG{p}{,}
+            \PYG{p}{(}\PYG{n}{course}\PYG{p}{,)}
+            \PYG{p}{)}
+\end{Verbatim}

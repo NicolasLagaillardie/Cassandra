@@ -1,0 +1,19 @@
+\BOOKMARK [1][-]{section.1}{Cr\351ation de la base de donn\351es}{}% 1
+\BOOKMARK [2][-]{subsection.1.1}{Oublier le mod\350le relationnel}{section.1}% 2
+\BOOKMARK [2][-]{subsection.1.2}{Mod\351lisation orient\351e colonnes}{section.1}% 3
+\BOOKMARK [2][-]{subsection.1.3}{Script CQL}{section.1}% 4
+\BOOKMARK [3][-]{subsubsection.1.3.1}{Keyspace}{subsection.1.3}% 5
+\BOOKMARK [3][-]{subsubsection.1.3.2}{User-Defined Types}{subsection.1.3}% 6
+\BOOKMARK [3][-]{subsubsection.1.3.3}{Tables}{subsection.1.3}% 7
+\BOOKMARK [2][-]{subsection.1.4}{NoSQL}{section.1}% 8
+\BOOKMARK [1][-]{section.2}{Approvisionnement de la base de donn\351es avec Python}{}% 9
+\BOOKMARK [2][-]{subsection.2.1}{Impl\351mentation des UDT}{section.2}% 10
+\BOOKMARK [2][-]{subsection.2.2}{Initialisation}{section.2}% 11
+\BOOKMARK [2][-]{subsection.2.3}{Course}{section.2}% 12
+\BOOKMARK [2][-]{subsection.2.4}{Student}{section.2}% 13
+\BOOKMARK [2][-]{subsection.2.5}{Results}{section.2}% 14
+\BOOKMARK [2][-]{subsection.2.6}{Schedule}{section.2}% 15
+\BOOKMARK [1][-]{section.3}{Exemple de requ\352tes CQL}{}% 16
+\BOOKMARK [2][-]{subsection.3.1}{students\137by\137course}{section.3}% 17
+\BOOKMARK [2][-]{subsection.3.2}{courses\137by\137students}{section.3}% 18
+\BOOKMARK [1][-]{section.4}{Conclusion}{}% 19
